@@ -37,5 +37,6 @@ namespace EntityLayer.Concrete
 
 
         public List<Comment> Comments { get; set; }
+        public List<Reservation> Reservations { get; set; }
     }
 }

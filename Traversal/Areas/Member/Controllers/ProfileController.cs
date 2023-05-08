@@ -43,10 +43,11 @@ namespace Traversal.Areas.Member.Controllers
                 var saveLocation = resource + "/wwwroot/User-Images/" + imageName;
                 var stream = new FileStream(saveLocation, FileMode.Create);
                 await p.Image.CopyToAsync(stream);
-                user.ImageUrl = imageName;
+                user.ImageUrl = "/User-Images/" + imageName;
             }
             user.Name = p.Name;
             user.Surname = p.Surname;
+            user.PhoneNumber = p.PhoneNumber;
             user.PasswordHash = _userManager.PasswordHasher.HashPassword(user, p.Password);
             var result = await _userManager.UpdateAsync(user);
             if (result.Succeeded)

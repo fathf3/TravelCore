@@ -1,10 +1,12 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Traversal.Areas.Member.Controllers
 {
@@ -13,14 +15,26 @@ namespace Traversal.Areas.Member.Controllers
     {
         DestinationManager destinationManager = new DestinationManager(new EfDestinationDal());
         ReservationManager reservationManager = new ReservationManager(new  EfReservationDal());
-        public IActionResult MyReservations()
+
+        private readonly UserManager<AppUser> _userManager;
+
+        public ReservationController(UserManager<AppUser> userManager)
         {
-            return View();
+            _userManager = userManager;
+        }
+
+        public async  Task<IActionResult> MyReservations()
+        {
+            var values = await _userManager.FindByNameAsync(User.Identity.Name);
+            var reservationList = reservationManager.GetListReservationWithDestination(values.Id);
+            return View(reservationList);
         }
             
-        public IActionResult MyOldReservations()
+        public async Task<IActionResult> MyOldReservations()
         {
-            return View();
+            var values = await _userManager.FindByNameAsync(User.Identity.Name);
+            var reservationList = reservationManager.GetListReservationWithDestination(values.Id);
+            return View(reservationList);
         }
 
         [HttpGet]
@@ -38,7 +52,8 @@ namespace Traversal.Areas.Member.Controllers
         [HttpPost]
         public IActionResult NewReservation(Reservation reservation)
         {
-            
+            reservation.AppUserId = 2;
+            reservation.ReservationStatus = "Onay Bekliyor";
             reservationManager.TAdd(reservation);
             return View("MyReservations");
         }

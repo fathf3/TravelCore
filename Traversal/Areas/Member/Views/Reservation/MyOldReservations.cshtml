@@ -1,0 +1,37 @@
+﻿@using EntityLayer.Concrete
+@model List<Reservation>
+@{
+    ViewData["Title"] = "MyOldReservations";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h1 class="align-center"> Geçmiş Rezarvasyonlarım</h1> 
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>Lokasyon</th>
+        <th>Kişi Sayısı</th>
+        <th>Tarih</th>
+        <th>Durum</th>
+    </tr>
+    
+
+@foreach (var item in Model)
+{
+    if(item.ReservationDate < DateTime.Now)
+    {
+       
+        <tr>
+            <td>@item.Destination.CityName</td>
+            <td>@item.PersonCount</td>
+            <td>@(((DateTime)item.ReservationDate).ToString("dd-MMM-yyyy"))</td>
+            <td>@item.ReservationStatus</td>
+            </tr>
+        }
+        else
+        {
+            
+        }
+    }
+ </table>

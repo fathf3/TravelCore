@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+@await Html.PartialAsync("~/Views/Admin/PartialHeader.cshtml")
+
+<body class="animsition">
+   
+    <div class="page-wrapper">
+        <!-- HEADER DESKTOP-->
+        @await Html.PartialAsync("~/Views/Admin/PartialNavBar.cshtml")
+
+        <!-- END HEADER DESKTOP-->
+        @await Html.PartialAsync("~/Views/Admin/PartialNavBarForMobile.cshtml")
+        <!-- HEADER MOBILE-->
+        
+       
+        @RenderBody()
+        <!-- PAGE CONTENT-->
+        <div class="page-content--bgf7">
+            <!-- BREADCRUMB-->
+            
+
+            <!-- COPYRIGHT-->
+            @await Html.PartialAsync("~/Views/Admin/PartialFooter.cshtml")
+            <!-- END COPYRIGHT-->
+        </div>
+
+    </div>
+    @await Html.PartialAsync("~/Views/Admin/PartialScripts.cshtml")
+</body>
+
+</html>
+<!-- end document-->
+
