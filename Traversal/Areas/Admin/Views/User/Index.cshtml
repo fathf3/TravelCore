@@ -1,0 +1,52 @@
+﻿@using EntityLayer.Concrete
+@model List<AppUser>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminPanel.cshtml";
+    int sayac = 0;
+}
+
+<br />
+<div style="align-content: center">
+<div class="container m-5">
+    
+
+<table class="table table-bordred">
+                                        
+<tr style="background-color: darkcyan; color:white">
+                                              
+        <th>#</th>
+        <th>Name</th>
+        <th>Mail</th>
+        <th>Resim</th>
+        <th>Telefon No.</th>
+        <th>Tur Geçmişi</th>
+        <th>Yorumlar</th>
+        <th>Düzenle</th>
+        <th>Sil</th>
+</tr>
+                                       
+                                        
+ @foreach (var item in Model)
+    {
+<tr class="tr-shadow">
+                                               
+ <th>@(sayac = sayac+1)</th>
+        <th>@item.Name</th>
+        <th>@item.Email</th>
+        <th>@item.ImageUrl</th>
+        <th>@item.PhoneNumber</th>
+  <th><a href="/admin/User/ReservationUser/@item.Id" clas="btn btn-outline-success">Göster</a> </th>
+  <th><a href="/admin/User/CommentUser/@item.Id" clas="btn btn-outline-info">Göster</a> </th>
+  <th><a href="/admin/Comment/EditUser/@item.Id" clas="btn btn-outline-secondary">Düzenle</a> </th>
+  <th><a href="/admin/User/DeleteUser/@item.Id" clas="btn btn-outline-danger">Sil</a> </th>
+</tr>
+}
+                                       
+</table>
+<a href="/Admin/User/AddUser" clas="btn btn-outline-primary">Yeni Kullanıcı Ekle</a>
+
+</div>
+
+
+</div>

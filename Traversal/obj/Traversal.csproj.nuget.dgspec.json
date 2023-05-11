@@ -47,6 +47,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[10.3.6, )"
@@ -316,6 +320,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "EPPlus": {
+              "target": "Package",
+              "version": "[6.0.7, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[10.3.6, )"
@@ -323,6 +331,10 @@
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[10.3.6, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[3.4.1, )"
             },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
@@ -351,6 +363,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[5.0.2, )"
+            },
+            "iTextSharp.LGPLv2.Core": {
+              "target": "Package",
+              "version": "[1.9.2, )"
             }
           },
           "imports": [

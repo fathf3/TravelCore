@@ -1,0 +1,46 @@
+﻿@using EntityLayer.Concrete
+@model List<Reservation>
+@{
+    ViewData["Title"] = "ReservationUser";
+    Layout = "~/Views/Shared/_AdminPanel.cshtml";
+}
+
+<h1>ReservationUser</h1>
+
+<div style="align-content: center">
+<div class="container m-5">
+    
+<div class="table-responsive table-responsive-data2">
+<table class="table table-bordered">
+
+    <tr>
+        <th>Lokasyon</th>
+        <th>Kişi Sayısı</th>
+        <th>Tarih</th>
+        <th>Durum</th>
+    </tr>
+    
+
+@foreach (var item in Model)
+{
+    if(item.ReservationDate < DateTime.Now)
+    {
+       
+        <tr>
+            <td>@item.Destination.CityName</td>
+            <td>@item.PersonCount</td>
+            <td>@(((DateTime)item.ReservationDate).ToString("dd-MMM-yyyy"))</td>
+            <td>@item.ReservationStatus</td>
+            </tr>
+        }
+        else
+        {
+            
+        }
+    }
+ </table>
+ </div>
+</div
+
+
+</div>
