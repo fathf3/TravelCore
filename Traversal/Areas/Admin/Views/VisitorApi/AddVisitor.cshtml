@@ -1,0 +1,42 @@
+﻿@model Traversal.Areas.Admin.Models.VisitorViewModel
+@{
+    ViewData["Title"] = "AddVisitor";
+    Layout = "~/Views/Shared/_AdminPanel.cshtml";
+}
+
+<h1>AddVisitor</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-md-12 ">
+
+<form method="post">
+   
+    <div class="form-group">
+        @Html.Label("İsim")
+        <input  type="text" asp-for="Name" class="form-control"/>
+    </div>
+    <div class="form-group">
+        @Html.Label("Soy İsim")
+        <input  type="text" asp-for="Surname" class="form-control"/>
+    </div>
+    <div class="form-group">
+        @Html.Label("Mail")
+        <input  type="text" asp-for="Mail" class="form-control"/>
+    </div>
+    <div class="form-group">
+        @Html.Label("Şehir")
+        <input  type="text" asp-for="City" class="form-control"/>
+    </div>
+     <div class="form-group">
+        @Html.Label("Ülke")
+        <input  type="text" asp-for="Country" class="form-control"/>
+    </div>
+   
+    
+    <button class="btn btn btn-secondary btn-md btn-block" style="align-content:center">Ziyaretçi Oluştur</button>
+</form>
+
+</div>
+</div>
+</div>

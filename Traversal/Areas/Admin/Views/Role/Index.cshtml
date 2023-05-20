@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminPanel.cshtml";
+}
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-md-12">
+<h1 class="text lnr-text-align-center" style="align-content: center">Burası Destination</h1>
+
+    <table class="table table-bordered">
+         <thead class="thead-dark" style="background-color: cadetblue; color: white">
+        <tr>
+            <td>#</td>
+            <td>Rol Adı<td>
+            <td>Rol Sil<td>
+            <td>Rol Güncelle<td>
+        </tr>
+        </thead>
+        @foreach (var item in Model)
+    {
+        <tr>
+            <td>asd</td>
+            
+            <td>@item.Name</td>    
+            <td></td>
+            <td><a href="/Admin/Role/DeleteRole/@item.Id" class="btn btn-outline-danger">Sil</a></td>
+            <td></td>
+            <td><a href="/Admin/Role/UpdateRole/@item.Id" class="btn btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+        
+    </table>
+    <a href="/Admin/Role/AddRole"><button type="submit" class="btn btn-primary btn-block mb-4">Yeni Rol Girişi</button></a>
+    <a href="/Admin/Role/UserList"><button type="submit" class="btn btn-primary btn-block mb-4">Rol Atama Yap</button></a>
+            </div></div></div>

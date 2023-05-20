@@ -1,0 +1,34 @@
+﻿@model DTOLayer.DTOs.AnnouncementDTOs.AnnouncementAddDTO
+@{
+    ViewData["Title"] = "AddAnnouncement";
+    Layout = "~/Views/Shared/_AdminPanel.cshtml";
+}
+
+<h1>AddAnnouncement</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-md-12 ">
+
+<form method="post">
+   
+    <div class="form-group">
+        <label>Başlık</label>
+        <input  type="text" asp-for="Title" class="form-control"/>
+        <span asp-validation-for="Title"></span>
+    </div>
+     <div class="form-group">
+        <label>İçerik</label>
+        <input  type="text" asp-for="Content" class="form-control"/>
+        <span asp-validation-for="Content"></span>
+    </div>
+    
+    <button class="btn btn btn-secondary btn-md btn-block" style="align-content:center">Duyuru Oluştur.</button>
+</form>
+
+</div>
+</div>
+</div>
+
+
+<br />

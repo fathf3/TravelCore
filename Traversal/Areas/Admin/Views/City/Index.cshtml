@@ -1,0 +1,46 @@
+﻿
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminPanel.cshtml";
+}
+
+<h1>AJAX</h1>
+
+<br />
+<button type="button" id="btnGetList" class="btn btn-outline-info">Sehir Listesi</button>
+
+<br />
+<br />
+
+<div id="cityList">
+
+    Şehir Listesi
+
+
+</div>
+
+<script>
+
+    $("#btnGetList").click(function () {
+        $.ajax({
+            contentType : "application/json",
+            dataType :"json",
+            type : "Get",
+            url : "Admin/City/CityList",
+            success: function (func){
+                let w = jQuery.parseJSON(func);
+                console.log(w);
+                let tablehtml = "<table class=table table-bordred"> <tr><th>Şehir ID </th> <th>Şehir Ad</th><th>Ülke Adı</th></tr>
+                $.each(w(index,value) =>{
+                    tablehtml += `<tr><td>${value.cityID}</td> <td>${value.cityName}</td> <td>${value.cityCountry}</td> </tr>`
+                });
+                tablehtml += "</table>";
+                $("#cityList").html(tablehtml);
+            }
+        });
+    });
+
+</script>
+
+

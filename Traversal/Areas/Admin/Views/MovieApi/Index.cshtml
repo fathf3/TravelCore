@@ -1,0 +1,43 @@
+﻿@model List<Traversal.Areas.Admin.Models.ApiMovieViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminPanel.cshtml";
+}
+
+
+<br />
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-md-12">
+<h1 class="text lnr-text-align-center" style="align-content: center">IMDB best 100</h1>
+<br />
+
+    <table class="table table-bordered">
+         <thead class="thead-dark" style="background-color: cadetblue; color: white">
+        <tr>
+            <td>#</td>
+            <td>Film Adı</td>
+            <td>Imdb Puanı</td>
+            <td>Yapım Yılı</td>
+            <td>Fragram</td>
+           
+            
+        </tr>
+        </thead>
+        @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.rank</td>
+            <td>@item.title</td>
+            <td>@item.rating</td>
+            <td>@item.year</td>
+            <td><a href="@item.trailer" class="btn btn-outline-secondary>">Fragramı izle</a></td>
+          
+
+        </tr>
+    }
+        
+    </table>
+    <a href="/Admin/Destination/AddDestination"><button type="submit" class="btn btn-primary btn-block mb-4">Yeni Tur Rotası</button></a>
+     
+            </div></div></div>

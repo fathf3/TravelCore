@@ -2486,6 +2486,19 @@
           "bin/placeholder/DataAccessLayer.dll": {}
         }
       },
+      "DTOLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "FluentValidation": "10.3.6"
+        },
+        "compile": {
+          "bin/placeholder/DTOLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DTOLayer.dll": {}
+        }
+      },
       "EntityLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -7558,6 +7571,11 @@
       "path": "../DataAccessLayer/DataAccessLayer.csproj",
       "msbuildProject": "../DataAccessLayer/DataAccessLayer.csproj"
     },
+    "DTOLayer/1.0.0": {
+      "type": "project",
+      "path": "../DTOLayer/DTOLayer.csproj",
+      "msbuildProject": "../DTOLayer/DTOLayer.csproj"
+    },
     "EntityLayer/1.0.0": {
       "type": "project",
       "path": "../EntityLayer/EntityLayer.csproj",
@@ -7566,6 +7584,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "DTOLayer >= 1.0.0",
       "DataAccessLayer >= 1.0.0",
       "EPPlus >= 6.0.7",
       "EntityLayer >= 1.0.0",
@@ -7606,6 +7625,9 @@
           "projectReferences": {
             "C:\\Users\\fatih\\Documents\\Code\\C#\\Traversal\\DataAccessLayer\\DataAccessLayer.csproj": {
               "projectPath": "C:\\Users\\fatih\\Documents\\Code\\C#\\Traversal\\DataAccessLayer\\DataAccessLayer.csproj"
+            },
+            "C:\\Users\\fatih\\Documents\\Code\\C#\\Traversal\\DTOLayer\\DTOLayer.csproj": {
+              "projectPath": "C:\\Users\\fatih\\Documents\\Code\\C#\\Traversal\\DTOLayer\\DTOLayer.csproj"
             },
             "C:\\Users\\fatih\\Documents\\Code\\C#\\Traversal\\EntityLayer\\EntityLayer.csproj": {
               "projectPath": "C:\\Users\\fatih\\Documents\\Code\\C#\\Traversal\\EntityLayer\\EntityLayer.csproj"

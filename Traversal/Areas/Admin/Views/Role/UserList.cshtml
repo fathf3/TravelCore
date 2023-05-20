@@ -1,0 +1,35 @@
+﻿@model List<AppUser>
+@{
+    ViewData["Title"] = "UserList";
+    Layout = "~/Views/Shared/_AdminPanel.cshtml";
+}
+
+<h1>UserList</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-md-12">
+<h1 class="text lnr-text-align-center" style="align-content: center">Burası Destination</h1>
+
+    <table class="table table-bordered">
+         <thead class="thead-dark" style="background-color: cadetblue; color: white">
+        <tr>
+            <td>#</td>
+            <td>Kullanıcı Adı<td>
+            <td>Rol Ata<td>
+            
+        </tr>
+        </thead>
+        @foreach (var item in Model)
+    {
+        <tr>
+            <td>#</td>
+            <td>@item.UserName</td>
+            <td></td>
+            <td><a href="/Admin/Role/AssignRole/@item.Id" class="btn btn-outline-info">Role Ata</a></td>
+        </tr>
+    }
+        
+    </table>
+    
+            </div></div></div>

@@ -1,0 +1,47 @@
+﻿@model List<Traversal.CQRS.Results.DestinationResult.GetAllDestinationQueryResult>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminPanel.cshtml";
+}
+
+<h1>Index</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-md-12">
+<h1 class="text lnr-text-align-center" style="align-content: center">Burası Destination</h1>
+
+    <table class="table table-bordered">
+         <thead class="thead-dark" style="background-color: cadetblue; color: white">
+        <tr>
+            <td>#</td>
+            <td>Şehir</td>
+            <td>Fiyat</td>
+            <td>Gün Gece</td>
+            <td>Kapasite</td>
+            <td>Sitede Gör</td>
+            <td>Sil</td>
+            <td>Güncelle</td>
+            
+        </tr>
+        </thead>
+        @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.id</td>
+            <td>@item.city</td>
+            <td>@item.price</td>
+            <td>@item.dayNight</td>
+            <td>@item.capacity</td>
+            <td><a href="/Destination/DestinationDetails/@item.id" class="btn btn-outline-info">Sitede Gör</a></td>
+            <td><a href="/Admin/Destination/DeleteDestination/@item.id" class="btn btn-outline-danger">Sil</a></td>
+            <td><a href="/Admin/Destination/UpdateDestination/@item.id" class="btn btn-outline-success">Güncelle</a></td>
+            
+
+        </tr>
+    }
+        
+    </table>
+    <a href="/Admin/Destination/AddDestination"><button type="submit" class="btn btn-primary btn-block mb-4">Yeni Tur Rotası</button></a>
+     
+            </div></div></div>

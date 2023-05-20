@@ -24,7 +24,7 @@ namespace Traversal.Areas.Admin.Controllers
             mimeMessage.Subject = mailRequest.Subject;
             SmtpClient smtpClient = new SmtpClient();
             smtpClient.Connect("smtp.gmail.com", 587, false);
-            smtpClient.Authenticate(mailRequest.SenderMail, )
+            smtpClient.Authenticate(mailRequest.SenderMail, mailRequest.ReceiverMail);
             smtpClient.Send(mimeMessage);
             smtpClient.Disconnect(true);
 

@@ -1,0 +1,19 @@
+﻿@model DTOLayer.DTOs.AnnouncementDTOs.AnnouncementUpdateDto
+@{
+    ViewData["Title"] = "UpdateAnnouncement";
+    Layout = "~/Views/Shared/_AdminPanel.cshtml";
+}
+
+<h1>Update Announcement</h1>
+
+<form method="post"> 
+
+    <input  type="hidden" asp-for="AnnouncementID" value="@Model.AnnouncementID"/>
+    <label>Baslık</label>
+    <input  type="text" asp-for="Title"/>
+    <br />
+    <label>İçerik</label>
+    <input  type="text" asp-for="Content"/>
+    <br />
+    <button class="btn btn-outline-primary"> Duyuru Güncelle </button>
+</form>

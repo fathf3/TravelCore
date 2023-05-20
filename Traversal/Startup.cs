@@ -1,23 +1,15 @@
-using BusinessLayer.Abstract;
-using BusinessLayer.Concrete;
 using BusinessLayer.Container;
-using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete;
-using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Traversal.CQRS.Handlers.DestinationHandlers;
 
 namespace Traversal
 {
@@ -33,6 +25,8 @@ namespace Traversal
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<GetAllDestinationQueryHandler>();
+
             services.AddLogging(x =>
             {
                 x.ClearProviders();
@@ -46,7 +40,15 @@ namespace Traversal
             services.AddControllersWithViews();
             
             services.ContainerDependencies();
-            
+            services.AddAutoMapper(typeof(Startup));
+
+            services.AddHttpClient();
+
+
+
+            services.CustomValidator();
+
+
             services.AddMvc(config =>
             {
                 var policy = new AuthorizationPolicyBuilder()
@@ -100,5 +102,7 @@ namespace Traversal
 
             
         }
+
+        
     }
 }

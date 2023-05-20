@@ -27,6 +27,13 @@ using Traversal.Areas.Member.Models;
 #line hidden
 #nullable disable
 #nullable restore
+#line 4 "C:\Users\fatih\Documents\Code\C#\Traversal\Traversal\Areas\Admin\Views\_ViewImports.cshtml"
+using DTOLayer.DTOs;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 1 "C:\Users\fatih\Documents\Code\C#\Traversal\Traversal\Areas\Admin\Views\User\Index.cshtml"
 using EntityLayer.Concrete;
 
@@ -34,7 +41,7 @@ using EntityLayer.Concrete;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0d4d46edf63d9a3e1c35a41840ab93002b63e1d2", @"/Areas/Admin/Views/User/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"63de5b753cd2435010d72e6a5eba309dd397f176", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6ad659cf7607014f894977cd2a8e8398e4bae2d7", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_Admin_Views_User_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<AppUser>>
     #nullable disable

@@ -1,0 +1,12 @@
+C:\Users\fatih\Documents\Code\C#\Traversal\DTOLayer\bin\Debug\net5.0\DTOLayer.deps.json
+C:\Users\fatih\Documents\Code\C#\Traversal\DTOLayer\bin\Debug\net5.0\DTOLayer.dll
+C:\Users\fatih\Documents\Code\C#\Traversal\DTOLayer\bin\Debug\net5.0\DTOLayer.pdb
+C:\Users\fatih\Documents\Code\C#\Traversal\DTOLayer\obj\Debug\net5.0\DTOLayer.csproj.AssemblyReference.cache
+C:\Users\fatih\Documents\Code\C#\Traversal\DTOLayer\obj\Debug\net5.0\DTOLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fatih\Documents\Code\C#\Traversal\DTOLayer\obj\Debug\net5.0\DTOLayer.AssemblyInfoInputs.cache
+C:\Users\fatih\Documents\Code\C#\Traversal\DTOLayer\obj\Debug\net5.0\DTOLayer.AssemblyInfo.cs
+C:\Users\fatih\Documents\Code\C#\Traversal\DTOLayer\obj\Debug\net5.0\DTOLayer.csproj.CoreCompileInputs.cache
+C:\Users\fatih\Documents\Code\C#\Traversal\DTOLayer\obj\Debug\net5.0\DTOLayer.dll
+C:\Users\fatih\Documents\Code\C#\Traversal\DTOLayer\obj\Debug\net5.0\refint\DTOLayer.dll
+C:\Users\fatih\Documents\Code\C#\Traversal\DTOLayer\obj\Debug\net5.0\DTOLayer.pdb
+C:\Users\fatih\Documents\Code\C#\Traversal\DTOLayer\obj\Debug\net5.0\ref\DTOLayer.dll

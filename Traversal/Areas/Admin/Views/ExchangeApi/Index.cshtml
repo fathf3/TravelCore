@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Traversal.Areas.Admin.Models.BookingExchangeViewModel2.Exchange_Rates>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminPanel.cshtml";
+}
+
+<br />
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-md-12">
+<h1 class="text lnr-text-align-center" style="align-content: center">Kur Bilgileri (TL)</h1>
+<br />
+
+    <table class="table table-bordered">
+         <thead class="thead-dark" style="background-color: cadetblue; color: white">
+        <tr>
+            <td>Kur Adı</td>
+            <td>Kur Oranı</td>
+        </tr>
+        </thead>
+        @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.currency</td>
+            <td>@item.exchange_rate_buy</td>
+        </tr>
+    }      
+    </table>
+
+            </div></div></div>
